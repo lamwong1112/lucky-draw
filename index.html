@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幸運抽獎系統</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="theme-toggle" id="themeToggle">🌙 深色模式</button>
+            <h1>🎉 幸運抽獎系統 🎉</h1>
+            <p class="subtitle">準備好迎接好運了嗎？</p>
+        </header>
+
+        <main>
+            <div class="setup-section">
+                <h2>📝 設定抽獎項目</h2>
+                <div class="input-group">
+                    <input type="text" id="itemInput" placeholder="輸入抽獎項目..." maxlength="50">
+                    <button id="addItemBtn">新增項目</button>
+                </div>
+                
+                <div class="items-list">
+                    <h3>抽獎項目清單：</h3>
+                    <ul id="itemsList"></ul>
+                    <button id="clearAllBtn" class="clear-btn">清空所有項目</button>
+                </div>
+            </div>
+
+            <div class="draw-section">
+                <h2>🎲 開始抽獎</h2>
+                <div class="draw-display">
+                    <div id="resultDisplay" class="result-display">
+                        <span id="resultText">點擊抽獎按鈕開始</span>
+                    </div>
+                    <button id="drawBtn" class="draw-button">🎯 抽獎</button>
+                </div>
+                
+                <div class="draw-history">
+                    <h3>抽獎歷史記錄：</h3>
+                    <ul id="historyList"></ul>
+                    <button id="clearHistoryBtn" class="clear-btn">清空歷史記錄</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>✨ 祝您好運連連 ✨</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
