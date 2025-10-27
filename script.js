@@ -36,9 +36,9 @@ class LuckyDrawApp {
         const themeToggle = document.getElementById('themeToggle');
         
         if (this.currentTheme === 'dark') {
-            themeToggle.textContent = '☀️ 淺色模式';
+            themeToggle.textContent = '☀️';
         } else {
-            themeToggle.textContent = '🌙 深色模式';
+            themeToggle.textContent = '🌙';
         }
         
         localStorage.setItem('luckyDrawTheme', this.currentTheme);
