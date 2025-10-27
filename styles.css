@@ -332,10 +332,22 @@ footer {
     }
     
     .theme-toggle {
-        top: 15px;
-        right: 15px;
-        padding: 8px 12px;
-        font-size: 14px;
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 12px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-toggle {
+        top: 8px;
+        right: 8px;
+        padding: 5px 8px;
+        font-size: 11px;
+        border-width: 1px;
     }
 }
 
