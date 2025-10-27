@@ -281,17 +281,21 @@ class LuckyDrawApp {
         messageDiv.className = `message message-${type}`;
         messageDiv.textContent = message;
         
+        // 檢查是否是移動端 (避免與主題切換按鈕重疊)
+        const isMobile = window.innerWidth <= 768;
+        const bottomValue = isMobile ? '80px' : '20px';
+        
         // 樣式設定
         Object.assign(messageDiv.style, {
             position: 'fixed',
-            top: '20px',
+            bottom: bottomValue,
             right: '20px',
             padding: '15px 20px',
             borderRadius: '8px',
             color: 'white',
             fontWeight: '600',
             zIndex: '1000',
-            transform: 'translateX(100%)',
+            transform: 'translateY(100%)',
             transition: 'transform 0.3s ease',
             maxWidth: '300px',
             wordWrap: 'break-word'
@@ -310,12 +314,12 @@ class LuckyDrawApp {
         
         // 顯示動畫
         setTimeout(() => {
-            messageDiv.style.transform = 'translateX(0)';
+            messageDiv.style.transform = 'translateY(0)';
         }, 100);
         
         // 自動隱藏
         setTimeout(() => {
-            messageDiv.style.transform = 'translateX(100%)';
+            messageDiv.style.transform = 'translateY(100%)';
             setTimeout(() => {
                 if (messageDiv.parentNode) {
                     messageDiv.parentNode.removeChild(messageDiv);
